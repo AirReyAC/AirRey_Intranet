@@ -1,0 +1,146 @@
+:root {
+    --colorTailWind: #5850EC;
+    --dirFondo: #99B9E8;
+}
+
+body {}
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+hr {
+    border: solid 10px var(--colorTailWind) !important;
+    opacity: 1 !important;
+}
+
+.userTools {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TARJETAS */
+/* TARJETAS */
+.contenido {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    height: 225px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 25px;
+    column-gap: 10px;
+    padding: 20px;
+}
+
+/* .ContTarjeta {
+    padding: 50px;
+    scroll-snap-align: start;
+    border-radius: 50px;
+    width: 100%;
+    height: 278px;
+    
+  } */
+
+.tarjeta {
+    padding: 50px;
+    text-align: center;
+    scroll-snap-align: start;
+    border-radius: 50px;
+    width: 572px;
+    height: 172px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.tarjeta h2 {
+    margin-top: -40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+a>p {
+    text-transform: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.tarjeta:nth-child(1) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/index1.jpg");
+    background-position: center center;
+}
+
+.tarjeta:nth-child(2) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/barrasdesignsScreenshot.png");
+    background-position: center center;
+}
+
+
+.tarjeta:nth-child(3) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/mFrutosScreenShot.png");
+    background-position: center center;
+}
+
+
+.tarjeta:nth-child(4) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/JanRadaScreenShot.png");
+    background-position: center center;
+}
+
+
+.tarjeta:nth-child(5) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/PensioneConsultoria.png");
+    background-position: center center;
+}
+
+
+
+@media (max-width: 768px) {}
+
+/* TERMINA TARJETAS */
+
+/* DIRECTORIO */
+.dirContainer {
+    width: 100%;
+    height: 300px;
+    background-color: var(--dirFondo);
+    border-radius: 7px;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+/* .directorio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+.directorio__titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.directorio__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
