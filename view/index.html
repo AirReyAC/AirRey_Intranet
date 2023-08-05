@@ -2,37 +2,30 @@
 
 {% block title %}Home{% endblock %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-
-<body>
-
     <div class="wrapper">
         <div class="mContent">
             <div class="logo">
-
+                
                 <img class="logo__img" src="../../img/airrey_logo.svg" alt="logo">
-
+                
             </div>
             <div class="loginForm">
-
+                
                 <div class="loginForm__wrapper">
                     <form action="loginForm__form">
-
+                        
                         <label for="username">Username</label>
                         <input id="username" type="string">
 
                         <label for="password">Password</label>
                         <input id="password" type="password">
-
+                        
                         <button class="loginForm__btn" type="submit">Login</button>
                     </form>
                 </div>
-
+                
             </div>
         </div>
     </div>
-</body>
 
-</html>
 {% endblock %}

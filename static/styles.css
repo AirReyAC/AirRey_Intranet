@@ -1,13 +1,13 @@
 :root {
-    --colorTailWind: #5850EC;
+    --colorBackGround: #5850EC;
     --dirFondo: #99B9E8;
 }
 
-body {}
-
 .wrapper {
+    margin-left: 2.5%;
     width: 95%;
-    margin: 0 auto;
+    border-radius: 5%;
+    background-color: var(--fondo2);
 }
 
 nav {
@@ -16,7 +16,7 @@ nav {
 }
 
 hr {
-    border: solid 10px var(--colorTailWind) !important;
+    border: solid 10px var(--colorBackGround) !important;
     opacity: 1 !important;
 }
 
@@ -24,6 +24,9 @@ hr {
     display: flex;
     justify-content: space-between;
 }
+
+/* HEADER */
+
 
 /* TARJETAS */
 /* TARJETAS */

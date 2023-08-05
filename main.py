@@ -4,6 +4,7 @@ from router.router import user
 
 
 app= FastAPI()
+
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
