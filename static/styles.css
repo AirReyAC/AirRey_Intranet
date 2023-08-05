@@ -3,16 +3,11 @@
     --dirFondo: #99B9E8;
 }
 
-.wrapper {
+#wrapper {
     margin-left: 2.5%;
     width: 95%;
     border-radius: 5%;
     background-color: var(--fondo2);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
 }
 
 hr {
@@ -27,6 +22,19 @@ hr {
 
 /* HEADER */
 
+nav {
+    width: 100%;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: red;
+    align-content: center;
+    justify-items: center;
+}
+.nav__logo{
+    width: 100%;
+    height: 100%;
+}
 
 /* TARJETAS */
 /* TARJETAS */
