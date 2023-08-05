@@ -4,13 +4,10 @@ from schema.user_schema import UserSchema, DataUser
 from config.db import engine
 from model.users import users
 from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
 from werkzeug.security import generate_password_hash, check_password_hash
 from typing import List
 
 user = APIRouter()
-
-user.mount("/static", StaticFiles(directory="static"), name="static")
 
 template = Jinja2Templates(directory="view")
 

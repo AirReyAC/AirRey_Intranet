@@ -5,3 +5,4 @@ werkzeug
 starlette
 cryptography
 jinja2
+PyMySQL
