@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %} | Airrey Services Intranet </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    {% include "components/header.html" %}
+    <!-- {% include "components/header.html" %} -->
 
-    <main>{% block content %}{% endblock %}</main>
+    <main>{% block login %}{% endblock %}</main>
 
 </body>
 
