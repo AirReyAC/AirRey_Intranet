@@ -5,16 +5,16 @@
 <div class="wrapper--login">
     <div class="login">
 
-        <img class="login__img" src="{{ url_for('static', path='img/logo_01_H.jpg') }}" alt="Logo">
+        <img class="login__img" src="{{ url_for('static', path='img/logo_H.jpg') }}" alt="Logo">
 
 
-        <form class="login__form" action="">
+        <form class="login__form" method="POST" action="/api/user/login">
 
             <label for="username">Username</label>
-            <input id="username" type="string">
+            <input name="username" id="username" type="string">
 
             <label for="password">Password</label>
-            <input id="password" type="password">
+            <input name="user_passw" id="user_passw" type="password">
 
             <button class="loginForm__btn" type="submit">Login</button>
         </form>

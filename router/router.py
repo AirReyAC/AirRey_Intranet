@@ -1,4 +1,5 @@
-from fastapi import APIRouter, Request, Response
+from fastapi import APIRouter, Request, Response, Form
+from fastapi.responses import HTMLResponse 
 from starlette.status import HTTP_201_CREATED, HTTP_204_NO_CONTENT, HTTP_401_UNAUTHORIZED
 from schema.user_schema import UserSchema, DataUser
 from config.db import engine
@@ -11,10 +12,50 @@ user = APIRouter()
 
 template = Jinja2Templates(directory="view")
 
+# Pantalla de LOGIN
 @user.get("/")
 def root(req: Request):
-    # return{"message: Hola, soy el servidor local de AirRey"}
     return template.TemplateResponse("index.html", {"request": req})
+
+@user.get("/home")
+def root(req: Request):
+    return template.TemplateResponse("home.html", {"request": req})
+
+# @user.post("/api/user/login", status_code=200)
+# def user_login(data_user: DataUser, req: Request):
+#     with engine.connect() as conn:
+
+#         result = conn.execute(users.select().where(users.c.username == data_user.username)).first()
+
+#         if result != None:
+#             check_passw = check_password_hash(result[3], data_user.user_passw)
+        
+#             if check_passw:
+                        
+#                 return{
+#                     "status": 200,
+#                     "message": "Acceso Exitoso"    
+#                 } 
+#             data_user.username: str =Form()
+#             data_user.user_passw: str = Form()
+#             return template.TemplateRespone("home.html", {"request": req})
+
+#             return{
+#                 "status": HTTP_401_UNAUTHORIZED,
+#                 "message": "Acceso Denegado"
+#             }
+
+@user.post("/api/user/login", response_class=HTMLResponse)
+def login(req: Request
+        #   , username: str = Form(), user_passw: str = Form()
+          ):
+#   verify = DataUser(username, user_passw)
+#   if verify:
+    return template.TemplateResponse("profile.html", {"request": req
+                                                #    , "data_user": verify
+                                                   })
+  
+#   return template.TemplateResponse("home.html", {"request": req})
 
 @user.get("/api/user/{user_id}", response_model=UserSchema)
 def get_user(user_id: str):
@@ -42,27 +83,6 @@ def create_user(data_user: UserSchema):
                 
         return Response(status_code=HTTP_201_CREATED) 
 
-@user.post("/api/user/login", status_code=200)
-def user_login(data_user: DataUser):
-    with engine.connect() as conn:
-        result = conn.execute(users.select().where(users.c.username == data_user.username)).first()
-
-        if result != None:
-            check_passw = check_password_hash(result[3], data_user.user_passw)
-        
-            if check_passw:
-                
-                return{
-                    "status": 200,
-                    "message": "Acceso Exitoso"
-                }
-        return{
-            "status": HTTP_401_UNAUTHORIZED,
-            "message": "Acceso Exitoso"
-        }
-
-        return "Denied"
-
 @user.put("/api/user/{userid}")
 def update_user(data_update: UserSchema, user_id: str):
     with engine.connect() as conn:
@@ -82,3 +102,9 @@ def delete_user(user_id: str):
         return Response(status_code=HTTP_204_NO_CONTENT)
 
     
+@user.get("/logout")
+def logout(req : Request):
+    return template.TemplateResponse("index.html", {"request": req})
+#   response = RedirectResponse('', status_code= 302)
+#   response.delete_cookie(key ='*your access token name*')
+#   return response
