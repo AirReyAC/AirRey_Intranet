@@ -29,23 +29,20 @@ body {
 a {
     text-decoration: none;
 }
-/* 
-nav {
-    font-family: monospace;
-} */
 
 ol,
 ul,
 li {
     list-style: none;
     margin: 0;
-   
+
 }
 
 .nav>li {
     display: flex;
     justify-content: flex-start;
 }
+
 .nav li a {
     background-color: var(--backgroundNav);
     color: var(--black);
@@ -63,7 +60,8 @@ li {
     display: none;
     position: absolute;
     min-width: 140px;
-    margin-top: 44px;
+    margin: 44px 0px;
+
 }
 
 .nav li:hover>ul {
@@ -74,10 +72,19 @@ li {
     position: relative;
     z-index: 10;
 }
-@media (max-width: 796px) { 
-    .nav{
+
+@media (max-width: 796px) {
+    .nav {
         flex-direction: column;
     }
+
+
+    .nav li ul {
+
+        margin: 0px 115px;
+
+    }
+
 }
 
 /* HEADER */
@@ -344,7 +351,6 @@ hr {
 /* End */
 
 /* TARJETAS */
-/* TARJETAS */
 .contenido {
     display: flex;
     overflow-x: scroll;
@@ -356,15 +362,6 @@ hr {
     padding: 20px;
 }
 
-/* .ContTarjeta {
-    padding: 50px;
-    scroll-snap-align: start;
-    border-radius: 50px;
-    width: 100%;
-    height: 278px;
-    
-  } */
-
 .tarjeta {
     padding: 50px;
     text-align: center;
@@ -374,19 +371,25 @@ hr {
     height: 172px;
     border-radius: 20%;
     cursor: pointer;
-    
+
 }
-.tarjeta>a{
+
+.textoTarjeta>a>h2 {
     color: var(--white);
 }
 
+.textoTarjeta>a>h2 {
+
+    background: linear-gradient(rgba(255, 255, 255, 0), black);
+    width: 100%;
+}
+
 .tarjeta h2 {
-    margin-top: -40px;
+    margin-top: 69px;
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 20px;
 }
-
 
 a>p {
     text-transform: none;
