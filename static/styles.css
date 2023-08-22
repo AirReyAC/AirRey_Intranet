@@ -2,6 +2,10 @@
 :root {
     --colorBackGround: #5850EC;
     --dirFondo: #99B9E8;
+    --backgroundNav: #fff;
+
+    --black: #000;
+    --white: #fff;
 }
 
 body {
@@ -25,43 +29,56 @@ body {
 a {
     text-decoration: none;
 }
-
+/* 
 nav {
     font-family: monospace;
-}
+} */
 
-ul {
-    /* background: darkorange; */
+ol,
+ul,
+li {
     list-style: none;
-    /* margin: 0;
-    padding-left: 0; */
+    margin: 0;
+   
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    background-color: red;
-  }
-  
-  .dropdown-content {
+.nav>li {
+    display: flex;
+    justify-content: flex-start;
+}
+.nav li a {
+    background-color: var(--backgroundNav);
+    color: var(--black);
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+}
+
+.nav li a:hover {
+    background-color: #434343;
+    color: var(--white);
+}
+
+.nav li ul {
     display: none;
     position: absolute;
-    color: black;
-    background-color: blue;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
+    min-width: 140px;
+    margin-top: 44px;
+}
+
+.nav li:hover>ul {
     display: block;
-  }
-/* .submenu .menu__link {
-        background: var(--fondobody);
-      } */
+}
 
-
+.nav li ul li {
+    position: relative;
+    z-index: 10;
+}
+@media (max-width: 796px) { 
+    .nav{
+        flex-direction: column;
+    }
+}
 
 /* HEADER */
 
@@ -357,6 +374,10 @@ hr {
     height: 172px;
     border-radius: 20%;
     cursor: pointer;
+    
+}
+.tarjeta>a{
+    color: var(--white);
 }
 
 .tarjeta h2 {
@@ -377,14 +398,14 @@ a>p {
 .tarjeta:nth-child(1) {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/index1.jpg");
+    background-image: url("./img/organigrama.jpg");
     background-position: center center;
 }
 
 .tarjeta:nth-child(2) {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/barrasdesignsScreenshot.png");
+    background-image: url("./img/urgentes.jpg");
     background-position: center center;
 }
 
@@ -392,7 +413,7 @@ a>p {
 .tarjeta:nth-child(3) {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/mFrutosScreenShot.png");
+    background-image: url("./img/identidad.jpg");
     background-position: center center;
 }
 
@@ -400,7 +421,7 @@ a>p {
 .tarjeta:nth-child(4) {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/JanRadaScreenShot.png");
+    background-image: url("./img//birthday.jpg");
     background-position: center center;
 }
 
@@ -408,7 +429,7 @@ a>p {
 .tarjeta:nth-child(5) {
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/PensioneConsultoria.png");
+    background-image: url("./img//calendar.jpg");
     background-position: center center;
 }
 
