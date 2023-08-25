@@ -1,50 +1,110 @@
 {% block header %}
 <header>
-    <div id="wrapper">
-
-        <nav>
-
-            <div class="nav__logo">
-
-
-                <img src="{{ url_for('static', path='img/airrey_logo.svg') }}" alt="Logo">
-
-            </div>
-
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <a class="navbar-brand" href="#">
+                <div class="logo">
+                    <img class="logo__img" src="./static/img/airrey_logo.svg" alt="airreylogo">
+                </div>
+            </a>
             <button class="btn">
 
-                <span><i><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle"
-                            width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <span><i><svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-user-circle" width="36" height="36"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
                             <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
                             <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
                         </svg></i></span>
             </button>
-            <div class="nav__menu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav end">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Operaciones</a>
-                        <a class="nav-link" href="#">Ventas</a>
-                        <a class="nav-link" href="#">Recursos Humanos</a>
-                        <a class="nav-link" href="#">Jurídico</a>
-                        <a class="nav-link" href="#">TI</a>
-                        <a class="nav-link" href="#">Calidad</a>
-                        <a class="nav-link" href="#">Marketing</a>
-                        <a class="nav-link" href="#">Finanzas</a>
-                    </div>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav end">
+                    <ul class="nav">
+                        <li>
+                            <a aria-current="page" href="/home">Home</a>
+                        </li>
+
+                        <li><a href="#">Operaciones</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Políticas</a></li>
+                                <li><a href="#">Manuales</a></li>
+                                <li><a href="#">Procedimientos</a></li>
+                                <li><a href="#">Instrucciones y Guías</a></li>
+                                <li><a href="#">Formatos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ventas</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Formatos</a></li>
+                                <li><a href="#">Procedimientos</a></li>
+                                <li><a href="#">Instructivos Y Guías</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">HR</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Evaluación del Desempeño</a></li>
+                                <li><a href="#">Capacitación</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Jurídico</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Contratos</a></li>
+                                <li><a href="#">Reportes</a></li>
+                                <li><a href="#">Informes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">IT</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Procedimientos</a></li>
+                                <li><a href="#">Políticas</a></li>
+                                <li><a href="#">Formatos</a></li>
+                                <li><a href="#">Mantenimiento</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Calidad</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Información de Calidad</a></li>
+                                <li><a href="#">Presentaciones</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MKT</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Reportes</a></li>
+                                <li><a href="#">Presentaciones</a></li>
+                            </ul style="padding-left: 0 !important">
+                        </li>
+                        <li><a href="#">Finanzas</a>
+                            <ul style="padding-left: 0 !important">
+                                <li><a href="#">Contabilidad</a></li>
+                                <li><a href="#">Reportes</a></li>
+                                <li><a href="#">Tesorería</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
                 </div>
             </div>
-
+            <a class="nav-link" href="/logout"><span> <i><svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-logout" width="36" height="36"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                            <path d="M9 12h12l-3 -3" />
+                            <path d="M18 15l3 -3" />
+                        </svg></i></span> </a>
         </nav>
-    </div>
 </header>
+<hr>
 {% endblock %}
