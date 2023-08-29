@@ -1,0 +1,29 @@
+{% block directorio %}
+
+<div class="directorio">
+
+    <form class="directorio__form" action="">
+        <label for="nombre">Directorio AirRey</label>
+        <input type="text" name="buscaDir" placeholder="Buscar..">
+
+        <button class="buscaDir" type="submit">Búsqueda de Colaborador</button>
+    </form>
+</div>
+<!-- <a href="#" class="buscaDir">Búsqueda</a> -->
+<section class="modal ">
+    <div class="modal__container">
+        <img class="modal__img" src="{{ url_for('static', path='img/logo_H.jpg') }}" alt="directorio_foto">
+        <div class="objectfit">
+            <img src="{{foto}}" alt="imagen_BD">
+        </div>
+        <h2 class="modal__title">{{Employee}}</h2>
+        <p class="modal__paragraph">{{Job_Title}}</p>
+        <p class="modal__paragraph">{{Number}}</p>
+        <p class="modal__paragraph">{{Email}}</p>
+        <p class="modal__paragraph">{{Office}}</p>
+        <a href="#" class="modal__close">Cerrar</a>
+    </div>
+</section>
+
+
+{% endblock %}

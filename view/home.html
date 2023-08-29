@@ -93,60 +93,8 @@
             </div>
 
     </section>
+    {% include "components/directorio.html" %}
 
-    <section>
-        <div class="dirContainer">
-            <div class="directorio">
-                <div class="directorio__titulo">
-                    <h2>Directorio</h2>
-                </div>
-                <div class="directorio__body">
-                    <form class="directorio__form" action="#">
-                        <div class="directorio__input">
-
-                            <label for="sucursal"> <i><svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-phone" width="44" height="44"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-                                    </svg></i> <span>Selecciona una sucursal</span> </label>
-                            <input id="sucursal" type="text" placeholder="Sucursal">
-                        </div>
-                        <div class="directorio__input">
-
-                            <label for="nombre"> <i><svg xmlns="http://www.w3.org/2000/svg"
-                                        class="icon icon-tabler icon-tabler-at" width="44" height="44"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                                        stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <circle cx="12" cy="12" r="4" />
-                                        <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
-                                    </svg></i> <span> Búsqueda por nombre</span> </label>
-                            <input id="nombre" type="text" placeholder="Nombre">
-                        </div>
-
-                        <div class="input-group w-50">
-                            <span class="input-group-text" id="basic-addon1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-                                    </path>
-                                </svg>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Input group example"
-                                aria-label="Input group example" aria-describedby="basic-addon1">
-                        </div>
-
-
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </section>
 </main>
 </div>
 {% endblock %}
