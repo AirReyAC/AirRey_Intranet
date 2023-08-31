@@ -69,7 +69,11 @@ li {
     position: absolute;
     min-width: 140px;
     margin: 44px 0px;
+    border: 1px solid #000;
 
+}
+.nav li ul:hover{
+background-color: #000;
 }
 
 .nav li:hover>ul {
@@ -97,7 +101,9 @@ li {
 
 /* HEADER */
 
-nav {}
+nav {
+    z-index: 10;
+}
 
 .nav__logo {
     width: 100%;
@@ -156,17 +162,12 @@ nav {}
 
 /* PROFILE */
 /* Import Font Dancing Script */
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
 
-* {
-    margin: 0;
-}
-
-body {
+/* body {
     background-color: #e8f5ff;
     font-family: Arial;
     overflow: hidden;
-}
+} */
 
 /* NavbarTop */
 .navbar-top {
@@ -215,16 +216,23 @@ body {
 /* End */
 
 /* Sidenav */
+.mainContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
 .sidenav {
-    background-color: #fff;
-    color: #333;
-    border-bottom-right-radius: 25px;
-    height: 86%;
+    background: linear-gradient(90deg, rgba(147, 210, 242, 1) 35%, rgba(44, 136, 190, 1) 100%);
+    color: #f2f2f2;
+    border-radius: 25px;
+    height: 47%;
     left: 0;
     overflow-x: hidden;
-    padding-top: 20px;
+    padding-top: 55px;
     position: absolute;
-    top: 70px;
+    top: 141px;
     width: 250px;
 }
 
@@ -251,43 +259,47 @@ body {
     padding-top: 10px;
 }
 
-.url,
-hr {
+.url {
     text-align: center;
 }
 
-.url hr {
+.url {
     margin-left: 20%;
     width: 60%;
+    margin-top: 122px;
 }
 
 .url a {
-    color: #818181;
+    color: #000;
+    background-color: #F6B63E;
     display: block;
     font-size: 20px;
-    margin: 10px 0;
-    padding: 6px 8px;
+    margin: -33px 0;
+    padding: 0px 8px;
     text-decoration: none;
+    border-radius: 28px;
 }
 
 .url a:hover,
 .url .active {
-    background-color: #e8f5ff;
+    background-color: #E76114;
     border-radius: 28px;
-    color: #000;
-    margin-left: 14%;
-    width: 65%;
+    color: #ffffff;
+    /* margin-left: 14%; */
+    /* width: 65%; */
 }
+
 
 /* End */
 
 /* Main */
 .main {
-    margin-top: 2%;
-    margin-left: 29%;
+    /* margin-top: 2%;
+    margin-left: 29%; */
+    margin: 0% 0% 0% 28%;
     font-size: 28px;
-    padding: 0 10px;
-    width: 58%;
+    padding: 0px;
+    width: 72%;
 }
 
 .main h2 {
@@ -302,8 +314,8 @@ hr {
     border-radius: 18px;
     box-shadow: 1px 1px 8px 0 grey;
     height: auto;
-    margin-bottom: 20px;
-    padding: 20px 0 20px 50px;
+    /* margin-bottom: 20px;
+    padding: 20px 0 20px 50px; */
 }
 
 .main .card table {
@@ -319,42 +331,61 @@ hr {
     right: 14%;
 }
 
-.social-media {
-    text-align: center;
-    width: 90%;
+
+
+
+@media (max-width: 960px) {
+    .sidenav{
+        width: 100%;
+    }
+    .main .card{
+        height: 286px;
+    }
+    .main .card table {
+
+
+        height: 117px;
+    }
+
+
+    .main {
+        margin: -25px 0% 0% 179px;
+        width: 65%;
+    }
+}
+@media (min-width: 240px) and (max-width: 468px) {
+    .mainContainer {
+        flex-direction: column;
+
+    }
+
+    .sidenav {
+
+        position: absolute;
+        top: 27%;
+    }
+
+    .main {
+        margin: 410px 0 0 0;
+        width: 100%;
+    }
+
+    .card {
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+
+    .main .card table {
+        border: none;
+        font-size: 16px;
+        height: 197px;
+        width: 80%;
+    }
+
 }
 
-.social-media span {
-    margin: 0 10px;
-}
 
-.fa-facebook:hover {
-    color: #4267b3 !important;
-}
 
-.fa-twitter:hover {
-    color: #1da1f2 !important;
-}
-
-.fa-instagram:hover {
-    color: #ce2b94 !important;
-}
-
-.fa-invision:hover {
-    color: #f83263 !important;
-}
-
-.fa-github:hover {
-    color: #161414 !important;
-}
-
-.fa-whatsapp:hover {
-    color: #25d366 !important;
-}
-
-.fa-snapchat:hover {
-    color: #fffb01 !important;
-}
 
 /* End */
 
@@ -455,34 +486,38 @@ a>p {
     display: flex;
     justify-content: center;
 }
-.directorio__form{
+
+.directorio__form {
     display: flex;
-  flex-direction: column;
-  padding: 0px;
-  width: 25%;
-  align-items: center;
-  justify-content: space-between;
-  height: 200px;
+    flex-direction: column;
+    padding: 0px;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
 }
-.directorio__form>label{
+
+.directorio__form>label {
     font-weight: 700;
-  text-align: center;
+    text-align: center;
 }
+
 input[type=text] {
     width: 100%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 7px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('./img/loupe.png');
-  background-position: 3px 4px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-}
-.buscaDir{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
     border-radius: 7px;
-  width: 71%;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('./img/loupe.png');
+    background-position: 3px 4px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+.buscaDir {
+    border-radius: 7px;
+    width: 71%;
 }
 
 .modal {
@@ -513,7 +548,7 @@ input[type=text] {
     width: 90%;
     max-width: 600px;
     max-height: 90%;
-    background: linear-gradient(98deg, rgba(44,136,190,1) 35%, rgba(147,210,242,1) 100%);
+    background: linear-gradient(98deg, rgba(44, 136, 190, 1) 35%, rgba(147, 210, 242, 1) 100%);
     border-radius: 6px;
     padding: 3em 2.5em;
     display: grid;
@@ -536,6 +571,7 @@ input[type=text] {
     width: 90%;
     max-width: 300px;
 }
+
 .objectfit {
     display: flex;
     justify-content: flex-start;
@@ -551,6 +587,7 @@ input[type=text] {
     background-color: rgb(160, 160, 160);
     border: 3px solid #002ab2;
 }
+
 .modal__close {
     text-decoration: none;
     color: #fff;

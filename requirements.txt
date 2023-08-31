@@ -6,3 +6,4 @@ starlette
 cryptography
 jinja2
 PyMySQL
+aiofiles

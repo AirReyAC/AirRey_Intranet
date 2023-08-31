@@ -1,37 +1,27 @@
-
 {%extends "components/layout.html" %}
 {% block content %}
+
 <body>
-    <div class="wrapper">
+    <div class="mainContainer">
+
 
         <!-- Sidenav -->
         <div class="sidenav">
             <div class="profile">
-                <span><i><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="72"
-                            height="72" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                        </svg></i></span>
 
-                <div class="name">
+                <div class="objectfit">
+                    <img src="{{foto}}" alt="imagen_BD">" alt="Foto_Perfil">
+                </div>
 
-                </div>
-                <div class="job">
-                </div>
             </div>
 
-            <div class="sidenav-url">
-                <div class="url">
-                    <a href="#" class="active">Perfil</a>
-                    <hr align="center">
-                </div>
-                <!-- <div class="url">
-            <a href="#settings">Settings</a>
-            <hr align="center">
-        </div> -->
+            <!-- <div class="sidenav-url"> -->
+
+            <div class="url">
+                <a href="#settings">Editar</a>
+
             </div>
+            <!-- </div> -->
         </div>
         <!-- End -->
 
@@ -44,30 +34,32 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td>Name</td>
-                                <td>:</td>
-                                <td></td>
+                                <th>Nombre:</th>
+                                <td>Jorge Barrera</td>
                             </tr>
                             <tr>
-                                <td>Email</td>
-                                <td>:</td>
-                                <td></td>
+                                <th>Puesto:</th>
+                                <td>Senior IT Analyst</td>
                             </tr>
                             <tr>
-                                <td>Ubicación</td>
-                                <td>:</td>
-                                <td></td>
+
+                                <th>Ciudad:</th>
+                                <td>Monterrey, México</td>
                             </tr>
                             <tr>
-                                <td>Job</td>
-                                <td>:</td>
-                                <td></td>
+                                <th>Email:</th>
+                                <td>jbarrera@airreyservice.com</td>
+                            </tr>
+                            <tr>
+                                <th>Teléfono:</th>
+                                <td>+52 81 15 02 89 45</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-
         </div>
-        {% endblock %}
+
+    </div>
+    {% endblock %}

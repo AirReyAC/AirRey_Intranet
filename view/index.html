@@ -11,25 +11,25 @@
 </head>
 
 <body>
-<div class="wrapper--login">
-    <div class="login">
+    <div class="wrapper--login">
+        <div class="login">
 
-        <img class="login__img" src="{{ url_for('static', path='img/logo_H.jpg') }}" alt="Logo">
+            <img class="login__img" src="{{ url_for('static', path='img/logo_H.jpg') }}" alt="Logo">
 
 
-        <form class="login__form" method="POST" action="/api/user/login">
+            <form class="login__form" method="GET" action="/api/user/login">
 
-            <label for="username">Username</label>
-            <input name="username" id="username" type="string">
+                <label for="username">Username</label>
+                <input name="username" id="username" type="string">
 
-            <label for="password">Password</label>
-            <input name="user_passw" id="user_passw" type="password">
+                <label for="password">Password</label>
+                <input name="user_passw" id="user_passw" type="password">
 
-            <button class="loginForm__btn" type="submit">Login</button>
-        </form>
+                <button class="loginForm__btn" type="submit">Login</button>
+            </form>
 
+        </div>
     </div>
-</div>
 </body>
 
 </html>
